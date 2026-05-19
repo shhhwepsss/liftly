@@ -1,0 +1,56 @@
+# Abbreviations
+
+Expansions for acronyms and shortforms used across Liftly's docs and code. Lifting-domain terms (1RM, RPE, …) sit alongside engineering ones (FCM, JWT, …) so this file is the single lookup. Domain *concepts* live in [UBIQUITOUS_LANGUAGE.md](./UBIQUITOUS_LANGUAGE.md); this file only expands the letters.
+
+- **1RM** — One-Rep Max. The heaviest weight a lifter can move for a single repetition.
+- **AEAD** — Authenticated Encryption with Associated Data.
+- **AES** — Advanced Encryption Standard.
+- **AES-GCM** — AES in Galois/Counter Mode. An authenticated symmetric encryption mode.
+- **API** — Application Programming Interface.
+- **CI** — Continuous Integration.
+- **CLI** — Command-Line Interface.
+- **CRUD** — Create, Read, Update, Delete.
+- **CSRF** — Cross-Site Request Forgery.
+- **DAO** — Data Access Object. Room's repository-style interface.
+- **DB** — Database.
+- **DDD** — Domain-Driven Design.
+- **DI** — Dependency Injection.
+- **DSN** — Data Source Name. The endpoint URL identifying a Sentry project.
+- **DST** — Daylight Saving Time.
+- **FCM** — Firebase Cloud Messaging. Google's push-notification service.
+- **FK** — Foreign Key.
+- **GUI** — Graphical User Interface.
+- **HTTP** — HyperText Transfer Protocol.
+- **ID** — Identifier.
+- **IPC** — Inter-Process Communication.
+- **ISO** — International Organization for Standardization. In this codebase, almost always referring to ISO 8601 timestamps.
+- **JSON** — JavaScript Object Notation.
+- **JVM** — Java Virtual Machine.
+- **JWT** — JSON Web Token.
+- **KSP** — Kotlin Symbol Processing. Kotlin's annotation processor (used by Room and Hilt).
+- **KTS** — Kotlin Script. The `.kts` extension used for Gradle build files written in Kotlin.
+- **LTE** — Long-Term Evolution. The mobile-data standard; in our docs, shorthand for "on cellular".
+- **MVI** — Model-View-Intent. The Android UI architecture pattern.
+- **MVP** — Minimum Viable Product.
+- **MVVM** — Model-View-ViewModel.
+- **ORM** — Object-Relational Mapping.
+- **OS** — Operating System.
+- **PK** — Primary Key.
+- **PPL** — Push / Pull / Legs. A common three-day training split.
+- **PR** — Personal Record (lifting context); also Pull Request (engineering context).
+- **PRD** — Product Requirements Document.
+- **RIR** — Reps In Reserve. A subjective intensity metric: how many more reps could you have done.
+- **RPE** — Rate of Perceived Exertion. A subjective intensity metric on a 1–10 scale.
+- **SDK** — Software Development Kit.
+- **SQL** — Structured Query Language.
+- **TBD** — To Be Determined.
+- **TEE** — Trusted Execution Environment. A hardware-isolated secure area on a device (used by Android Keystore).
+- **TS** — TypeScript.
+- **TTL** — Time To Live.
+- **UI** — User Interface.
+- **UL** — Ubiquitous Language.
+- **URI** — Uniform Resource Identifier.
+- **UTC** — Coordinated Universal Time.
+- **UUID** — Universally Unique Identifier.
+- **UX** — User Experience.
+- **VPS** — Virtual Private Server.
