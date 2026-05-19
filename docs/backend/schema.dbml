@@ -1,6 +1,6 @@
 // Liftly — Backend Database Schema
 // Format: DBML (https://dbml.dbdiagram.io)
-// Source of truth: docs/BACKEND_ARCHITECTURE.md §3 Persistence Layer → Table list
+// Source of truth: docs/backend/persistence.md → Table list
 // Last updated: 2026-05-19
 //
 // Conventions:
@@ -16,8 +16,8 @@ Project liftly {
   database_type: 'PostgreSQL'
   Note: '''
     Modular monolith schema for the Liftly MVP. See
-    docs/BACKEND_ARCHITECTURE.md for module ownership, domain logic
-    placement, and the rationale behind index choices.
+    docs/backend/README.md for module ownership and docs/backend/domain-logic.md
+    for domain logic placement and the rationale behind index choices.
   '''
 }
 
@@ -93,7 +93,7 @@ Table custom_exercises {
   }
 
   Note: '''
-    See BACKEND_ARCHITECTURE.md §11 open question 1: this may be merged
+    See docs/backend/open-questions.md Q1: this may be merged
     into `exercises` with a nullable `user_id` and the `is_preset` flag.
   '''
 }
@@ -115,7 +115,7 @@ Table routines {
 Table routine_exercises {
   id uuid [pk]
   routine_id uuid [not null, ref: > routines.id]
-  exercise_id uuid [not null, note: 'Polymorphic FK → exercises OR custom_exercises (see §11 Q1)']
+  exercise_id uuid [not null, note: 'Polymorphic FK → exercises OR custom_exercises (see open-questions.md Q1)']
   position int [not null]
   rest_seconds int [not null]
 
@@ -127,7 +127,7 @@ Table routine_exercises {
 Table user_exercise_configs {
   id uuid [pk]
   user_id uuid [not null, ref: > users.id]
-  exercise_id uuid [not null, note: 'Polymorphic FK → exercises OR custom_exercises (see §11 Q1)']
+  exercise_id uuid [not null, note: 'Polymorphic FK → exercises OR custom_exercises (see open-questions.md Q1)']
   working_weight_kg decimal(6,2) [not null]
   rep_range_lower int [not null]
   rep_range_upper int [not null]
@@ -158,7 +158,7 @@ Table sets {
   id uuid [pk, note: 'Client-generated for offline-safe writes']
   workout_id uuid [not null, ref: > workouts.id]
   user_id uuid [not null, ref: > users.id]
-  exercise_id uuid [not null, note: 'Polymorphic FK → exercises OR custom_exercises (see §11 Q1)']
+  exercise_id uuid [not null, note: 'Polymorphic FK → exercises OR custom_exercises (see open-questions.md Q1)']
   reps int [not null]
   weight_kg decimal(6,2) [not null]
   added_weight_kg decimal(6,2)
@@ -191,7 +191,7 @@ Table weigh_ins {
 Table progression_events {
   id uuid [pk]
   user_id uuid [not null, ref: > users.id]
-  exercise_id uuid [not null, note: 'Polymorphic FK → exercises OR custom_exercises (see §11 Q1)']
+  exercise_id uuid [not null, note: 'Polymorphic FK → exercises OR custom_exercises (see open-questions.md Q1)']
   direction progression_direction [not null]
   before_kg decimal(6,2) [not null]
   after_kg decimal(6,2) [not null]

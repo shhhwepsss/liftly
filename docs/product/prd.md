@@ -2,7 +2,7 @@
 
 **Status:** MVP scope locked
 **Audience:** A small private group (the author + friends), used as testers.
-**Companion doc:** [UBIQUITOUS_LANGUAGE.md](./UBIQUITOUS_LANGUAGE.md) — all bolded terms below are defined there.
+**Companion doc:** [Ubiquitous Language](./ubiquitous-language.md) — all bolded terms below are defined there.
 
 ---
 

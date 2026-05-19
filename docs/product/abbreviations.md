@@ -1,6 +1,6 @@
 # Abbreviations
 
-Expansions for acronyms and shortforms used across Liftly's docs and code. Lifting-domain terms (1RM, RPE, …) sit alongside engineering ones (FCM, JWT, …) so this file is the single lookup. Domain *concepts* live in [UBIQUITOUS_LANGUAGE.md](./UBIQUITOUS_LANGUAGE.md); this file only expands the letters.
+Expansions for acronyms and shortforms used across Liftly's docs and code. Lifting-domain terms (1RM, RPE, …) sit alongside engineering ones (FCM, JWT, …) so this file is the single lookup. Domain *concepts* live in [ubiquitous-language.md](./ubiquitous-language.md); this file only expands the letters.
 
 - **1RM** — One-Rep Max. The heaviest weight a lifter can move for a single repetition.
 - **AEAD** — Authenticated Encryption with Associated Data.
