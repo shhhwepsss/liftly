@@ -14,4 +14,9 @@ Reference docs for Liftly. Start with the product side to understand *what* Lift
 
 ## Backend
 
-[`backend/`](./backend/README.md) — NestJS + TypeScript + PostgreSQL. Modular monolith with `controller → use case → service → repository` layering. Full database schema in [`backend/schema.dbml`](./backend/schema.dbml).
+[`backend/`](./backend/README.md) — NestJS + TypeScript + PostgreSQL. Modular monolith with `controller → use case → service → repository` layering. Full database schema in [`backend/architecture/schema.dbml`](./backend/architecture/schema.dbml).
+
+## Architecture decisions
+
+- [`decisions/`](./decisions/README.md) — Cross-stack ADRs. Each stack also has its own decision log: [`backend/decisions/`](./backend/decisions/README.md), [`android/decisions/`](./android/decisions/README.md).
+- See [`AGENTS.md`](../AGENTS.md) at the repo root for how to navigate the docs, when to write an ADR, and what to update after writing one.
