@@ -1,7 +1,19 @@
 // Liftly — Backend Database Schema
 // Format: DBML (https://dbml.dbdiagram.io)
-// Source of truth: docs/backend/persistence.md → Table list
-// Last updated: 2026-05-19
+//
+// Source-of-truth contract:
+//   - Until MVP (deployed app + first Android GitHub release), this file is
+//     hand-written and IS the spec. Drizzle TS schemas (src/**/*.schema.ts)
+//     are implemented to match it. CI runs drizzle-dbml-generator against
+//     the current Drizzle code and fails the build if the output is not
+//     semantically equivalent to this file. Edit this file first when the
+//     spec needs to change; CI then catches the Drizzle drift.
+//   - From MVP onward, the assertion inverts: this file becomes generated
+//     from src/**/*.schema.ts and must be regenerated and committed with
+//     every schema PR. See docs/backend/architecture/persistence.md for
+//     the full contract.
+//
+// Last updated: 2026-05-20
 //
 // Conventions:
 //   - All timestamps stored as `timestamptz` (UTC); column names suffixed `_utc`
@@ -16,8 +28,9 @@ Project liftly {
   database_type: 'PostgreSQL'
   Note: '''
     Modular monolith schema for the Liftly MVP. See
-    docs/backend/README.md for module ownership and docs/backend/domain-logic.md
-    for domain logic placement and the rationale behind index choices.
+    docs/backend/architecture/bounded-contexts.md for module ownership and
+    docs/backend/architecture/domain-logic.md for domain logic placement
+    and the rationale behind index choices.
   '''
 }
 
