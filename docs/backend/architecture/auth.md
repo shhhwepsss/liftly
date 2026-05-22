@@ -13,3 +13,5 @@ Flow:
 **Why not fully stateless (refresh token in JWT):** For a tiny private app the ops cost of a `refresh_tokens` table is near zero, and it buys immediate revocation (useful if a test device is lost). Fully stateless refresh tokens cannot be revoked without a denylist — same complexity, less control.
 
 **Why not sessions/cookies:** The client is Android, not a browser. Bearer tokens are the natural fit and avoid cookie/CSRF complexity.
+
+**Why the refresh token is returned in the response body (not an HttpOnly cookie):** The HttpOnly-cookie rule is a browser/XSS mitigation that has no force on a native client. See [`ADR-0001`](../../decisions/0001-bearer-tokens-not-httponly-cookies.md) for the full rationale and the revisit trigger (a future browser client).

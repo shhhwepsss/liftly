@@ -25,6 +25,8 @@ Google deprecated `androidx.security:security-crypto` (which provided `Encrypted
 - The Tink AEAD key is generated once per install and wrapped by an Android Keystore-backed AES key (alias `liftly_auth_v1`). The wrapping key never leaves secure hardware on devices with a TEE.
 - Non-sensitive preferences (theme, locale, etc.) live in a separate, unencrypted Proto DataStore. Mixing sensitive data into the preferences store is the anti-pattern to avoid.
 
+This Keystore-backed encrypted store is why the server returns the refresh token in the response body rather than an HttpOnly cookie — on a native client it is the proper protection, and the cookie pattern is a browser/XSS mitigation that doesn't apply. See [`backend/ADR-0001`](../../decisions/0001-bearer-tokens-not-httponly-cookies.md).
+
 ## Refresh-on-401 interceptor
 
 An OkHttp `Authenticator` (not an `Interceptor`) handles 401 responses. It synchronously calls `POST /auth/refresh { refreshToken }` on the calling thread, stores the new access token, and retries the original request with the new token. The `Authenticator` is re-entrant-safe: it tracks in-flight refresh requests so concurrent 401s collapse onto a single refresh call.

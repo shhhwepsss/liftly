@@ -15,7 +15,7 @@ For the docs system itself (how to write an ADR, what to update after), see [`AG
 
 | # | Title | Status | Read when |
 |---|-------|--------|-----------|
-| — | (none yet) | — | — |
+| 0001 | [Refresh token in the response body, not an HttpOnly cookie](./0001-bearer-tokens-not-httponly-cookies.md) | Accepted | Touching the auth token flow; answering why the refresh token isn't an HttpOnly cookie; adding any non-Android client. |
 
 ## Stack-local decision logs
 
